@@ -9,6 +9,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DescriptionComponent } from './description/description.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

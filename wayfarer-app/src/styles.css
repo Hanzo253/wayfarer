@@ -3,4 +3,13 @@
 body {
   background-color: #a5d8ff;
   font-family: "Open Sans", sans-serif;
+  /* background-color: #023047; */
+}
+
+.carousel-control-next-icon::after {
+  content: none !important;
+}
+
+.carousel-control-prev-icon::after {
+  content: none !important;
 }
