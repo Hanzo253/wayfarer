@@ -29,7 +29,24 @@ span {
   font-style: italic;
 }
 
-/* .city-carousel {
-  display: block;
+.description-div {
   margin: 25px;
-} */
+  border-radius: 5px;
+  border: 4px solid #1864ab;
+  width: 920px;
+}
+
+.description {
+  margin: 25px;
+}
+
+.slideshow-section {
+  height: 51.7vh;
+  background-color: #023047;
+}
+
+.description-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
