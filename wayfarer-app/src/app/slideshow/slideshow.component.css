@@ -1,33 +1,35 @@
-  
 .picsum-img-wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    padding: 0;
-    transition: all 500ms ease;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 0;
+  transition: all 500ms ease;
 
-    overflow: hidden;
-    position: relative;
-    width: 1000px;
-    margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  width: 1000px;
+  margin: 0 auto;
 }
-  
-  
-  
+
 .city-pics {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    height: 500px;
-    min-width: 1000px;
-    background-position: center center;
-    background-size: cover;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  height: 500px;
+  min-width: 1000px;
+  background-position: center center;
+  background-size: cover;
 }
 
 .carousel-caption {
-    font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 span {
-    font-style: italic;
+  font-style: italic;
 }
+
+/* .city-carousel {
+  display: block;
+  margin: 25px;
+} */

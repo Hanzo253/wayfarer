@@ -1,0 +1,10 @@
+.slideshow-section {
+  height: 51.7vh;
+  background-color: #023047;
+}
+
+.description-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
