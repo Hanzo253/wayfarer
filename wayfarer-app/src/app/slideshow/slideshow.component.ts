@@ -15,4 +15,9 @@ export class SlideshowComponent implements OnInit {
     
   }
 
+  clickWorks(){
+    console.log("button works")
+  }
+
+  
 }
