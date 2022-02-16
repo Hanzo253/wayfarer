@@ -1,0 +1,54 @@
+.header {
+  background-color: #1864ab;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  height: 4rem;
+  padding: 0 4.8rem;
+  position: relative;
+}
+
+.logo {
+  display: inline-block;
+  margin-right: 8px;
+  font-family: "Redressed", cursive;
+  font-size: 1.5rem;
+  color: #a5d8ff;
+  border: #a5d8ff solid;
+  padding: 0 10px;
+}
+
+.app-name {
+  text-decoration: none;
+  color: #f8f9fa;
+}
+
+.app-name:hover {
+  transition: all 0.3s;
+  color: #a5d8ff;
+}
+
+.header-nav-list {
+  padding-top: 1rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.header-nav-link:link,
+.header-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #f8f9fa;
+  font-weight: 500;
+  font-size: 1.2rem;
+  transition: all 0.3s;
+}
+
+.header-nav-link:hover,
+.header-nav-link:active {
+  color: #a5d8ff;
+}
