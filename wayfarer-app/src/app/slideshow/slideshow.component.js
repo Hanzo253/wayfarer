@@ -1,35 +1,35 @@
-/////////CITY PIC VARIABLES//////////////////
+// /////////CITY PIC VARIABLES//////////////////
 
-// const jsGallery = document.querySelector('.gallery');
-const jsGalleryItem = document.querySelectorAll('.carousel-item');
-console.log(jsGallery);
-console.log(jsGalleryItem);
-
-
-
-/////////TRANSITIONING THE SLIDES////////////
-
-const slideCount =jsGalleryItem.length;
-const slideWidth = jsGalleryItem[0].offsetWidth;
-console.log(slideCount);
-
-//////////////TIMER/////////////////////
-
-let currentSlide =1;
-function transitionSlide() {
-  console.log('Called');
-  if (currentSlide < slideCount){
-    jsGallery.style.transform = `translateX(-${1000*currentSlide}px)`;
-    currentSlide++
-  } else {
-    jsGallery.style.transform = 'translateX(0)';
-  }
-}
- setInterval(transitionSlide, 5000);
+// // const jsGallery = document.querySelector('.gallery');
+// const jsGalleryItem = document.querySelectorAll('.carousel-item');
+// console.log(jsGallery);
+// console.log(jsGalleryItem);
 
 
 
-/////////////// CODE FROM YOUTUBE EX ///////////////
+// /////////TRANSITIONING THE SLIDES////////////
+
+// const slideCount =jsGalleryItem.length;
+// const slideWidth = jsGalleryItem[0].offsetWidth;
+// console.log(slideCount);
+
+// //////////////TIMER/////////////////////
+
+// let currentSlide =1;
+// function transitionSlide() {
+//   console.log('Called');
+//   if (currentSlide < slideCount){
+//     jsGallery.style.transform = `translateX(-${1000*currentSlide}px)`;
+//     currentSlide++
+//   } else {
+//     jsGallery.style.transform = 'translateX(0)';
+//   }
+// }
+//  setInterval(transitionSlide, 5000);
+
+
+
+// /////////////// CODE FROM YOUTUBE EX ///////////////
 
 // let i = 0;
 // let images = [];

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { SlideshowComponent } from './slideshow/slideshow.component';
 import { SlideshowDirective } from './slideshow.directive';
 import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MdbCarouselModule
+    MdbCarouselModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
