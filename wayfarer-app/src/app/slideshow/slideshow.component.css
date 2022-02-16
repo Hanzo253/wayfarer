@@ -23,6 +23,12 @@
 
 .carousel-caption {
   font-family: "Open Sans", sans-serif;
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 3em;
+  color: #fff3bf;
 }
 
 span {

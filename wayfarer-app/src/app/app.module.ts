@@ -9,6 +9,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { CitiesDirective } from './cities.directive';
 import { DescriptionComponent } from './description/description.component';
+import { CityComponent } from './city/city.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DescriptionComponent } from './description/description.component';
     CitiesComponent,
     NavBarComponent,
     CitiesDirective,
-    DescriptionComponent
+    DescriptionComponent,
+    CityComponent
   ],
   imports: [
     BrowserModule,
