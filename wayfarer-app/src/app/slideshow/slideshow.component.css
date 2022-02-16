@@ -1,8 +1,28 @@
-.image {
+.gallery-item {
     list-style: none;
 }
 
-/* #san-fran-pic {
-    width: 5000px;
-    height: 00px;
-} */
+  
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 0;
+    transition: all 500ms ease;
+}
+  
+  
+.city-gallery-container {
+    overflow: hidden;
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+}
+  
+.galleryItem {
+    list-style: none;
+    height: 500px;
+    min-width: 1000px;
+    background-position: center center;
+    background-size: cover;
+}
