@@ -7,4 +7,17 @@
       class="cover-img"
     />
   </div>
+  <div
+    *ngFor="let post of city.posts; index as i"
+    class="row posts-component-card"
+  >
+    <div class="col-sm-8">
+      <h1>
+        <a routerLink="/cities/{{ city.id }}/posts/{{ i }}"
+          >{{ city.name }}{{ post.title }}</a
+        >
+      </h1>
+      <p>{{ post.body }}</p>
+    </div>
+  </div>
 </section>
