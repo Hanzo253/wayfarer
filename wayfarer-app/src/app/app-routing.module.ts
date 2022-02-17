@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CITIES } from './cities/cities';
 import { CitiesComponent } from './cities/cities.component';
 import { CityComponent } from './city/city.component';
+import { PostComponent } from './post/post.component';
 import { SlideshowComponent } from './slideshow/slideshow.component';
 
 const routes: Routes = [
@@ -12,26 +13,17 @@ const routes: Routes = [
   },
   {
     path: 'cities',
-<<<<<<< HEAD
-    component: CitiesComponent
-},
-{
-  path: '',
-  component: SlideshowComponent
-},{
-  path: 'cities/:id',
-  component: CitiesComponent
-}
-=======
     component: CitiesComponent,
     children: [
       {
         path: ':id',
         component: CityComponent
+      },{
+        path: ':id/posts/:postId',
+        component: PostComponent
       }
     ]
   }
->>>>>>> c6ae97cd54d631b8f1ce9f636b2def06c0f80c0a
 ];
 
 @NgModule({

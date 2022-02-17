@@ -11,7 +11,7 @@ export class PostComponent implements OnInit {
 
   cities: any =CITIES;
   city: any;
-  post: any;
+  posts: any;
 
 
 
