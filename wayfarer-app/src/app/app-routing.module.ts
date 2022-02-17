@@ -26,7 +26,7 @@ const routes: Routes = [
     component: CitiesComponent,
     children: [
       {
-        path: 'cities/:id',
+        path: ':id',
         component: CityComponent
       }
     ]
