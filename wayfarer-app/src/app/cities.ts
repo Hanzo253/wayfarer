@@ -2,7 +2,8 @@ export const CITIES = [
     {
         id: 1,
         name: 'San Francsico',
-        imgUrl: '',
+        imgUrl: 'assets/images/san-fran.jpg',
+        coverImgUrl: 'assets/images/san-francisco-header.jpg',
         posts: [{
             title: '',
             user: '',
@@ -15,7 +16,8 @@ export const CITIES = [
     }, {
         id: 2,
         name: 'London',
-        imgUrl: '',
+        imgUrl: 'assets/images/london.jpg',
+        coverImgUrl: 'assets/images/london-header.jpg',
         posts: [{
             title: '',
             user: '',
@@ -28,7 +30,8 @@ export const CITIES = [
     },{
         id:3,
         name: 'Sydney',
-        imgUrl: '',
+        imgUrl: 'assets/images/sydney.jpg',
+        coverImgUrl: 'assets/images/sydney-header.jpg',
         posts: [{
             title: '',
             user: '',
@@ -41,7 +44,8 @@ export const CITIES = [
     }, {
         id:4,
         name: 'Seattle',
-        imgUrl: '',
+        imgUrl: 'assets/images/seattle.jpg',
+        coverImgUrl: 'assets/images/seattle-header.jpg',
         posts: [{
             title: '',
             user: '',
