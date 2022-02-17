@@ -10,6 +10,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { CitiesDirective } from './cities.directive';
 import { DescriptionComponent } from './description/description.component';
 import { CityComponent } from './city/city.component';
+// import { SearchService } from './nav-bar/search.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { CityComponent } from './city/city.component';
     AppRoutingModule,
     NgbModule
   ],
-  providers: [],
+  providers: [], //<---don't forget to add the SearchService back
   bootstrap: [AppComponent]
 })
 export class AppModule { }
