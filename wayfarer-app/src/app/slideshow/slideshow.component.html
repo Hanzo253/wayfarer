@@ -1,8 +1,12 @@
-
-<ngb-carousel *ngIf="images">
+<section class="slideshow-section">
+  <ngb-carousel *ngIf="images" class="city-carousel">
     <ng-template ngbSlide>
       <div class="picsum-img-wrapper">
-        <img class="city-pics" src="./assets/images/san-francisco-landing.jpg" alt="san francisco">
+        <img
+          class="city-pics"
+          src="./assets/images/san-francisco-landing.jpg"
+          alt="san francisco"
+        />
       </div>
       <div class="carousel-caption">
         <h2>San Francisco</h2>
@@ -11,7 +15,11 @@
     </ng-template>
     <ng-template ngbSlide>
       <div class="picsum-img-wrapper">
-        <img class="city-pics" src="./assets/images/sydney-landing.jpg" alt="sydney">
+        <img
+          class="city-pics"
+          src="./assets/images/sydney-landing.jpg"
+          alt="sydney"
+        />
       </div>
       <div class="carousel-caption">
         <h2>Sydney</h2>
@@ -20,7 +28,11 @@
     </ng-template>
     <ng-template ngbSlide>
       <div class="picsum-img-wrapper">
-        <img class="city-pics" src="./assets/images/seattle-landing.jpg" alt="seattle">
+        <img
+          class="city-pics"
+          src="./assets/images/seattle-landing.jpg"
+          alt="seattle"
+        />
       </div>
       <div class="carousel-caption">
         <h2>Seattle</h2>
@@ -28,103 +40,20 @@
       </div>
     </ng-template>
     <ng-template ngbSlide>
-        <div class="picsum-img-wrapper">
-          <img class="city-pics" src="./assets/images/london-landing.jpg" alt="london">
-        </div>
-        <div class="carousel-caption">
-          <h2>London</h2>
-          <p><span>"Crepes! Crepes! Crepes!" - Arnold</span></p>
-        </div>
-      </ng-template>
+      <div class="picsum-img-wrapper">
+        <img
+          class="city-pics"
+          src="./assets/images/london-landing.jpg"
+          alt="london"
+        />
+      </div>
+      <div class="carousel-caption">
+        <h2>London</h2>
+        <p><span>"Crepes! Crepes! Crepes!" - Arnold</span></p>
+      </div>
+    </ng-template>
   </ngb-carousel>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <div id="carouselBasicExample" class="carousel slide carousel-fade" data-mdb-ride="carousel">
-    <div class="carousel-indicators">
-        <button 
-        type="button"
-        data-mdb-target="#carouselBasicExample"
-        data-mdb-slide-to="0"
-        class="active"
-        aria-current="true"
-        aria-label="Slide 1"
-        ></button>
-        <button (click)="clickWorks()"
-        type="button"
-        data-mdb-target="#london"
-        data-mdb-slide-to="1"
-        aria-label="Slide 2"
-        ></button>
-        <button
-        type="button"
-        data-mdb-target="#sydney"
-        data-mdb-slide-to="2"
-        aria-label="Slide 3"
-        ></button>
-        <button
-        type="button"
-        data-mdb-target="#seattle"
-        data-mdb-slide-to="3"
-        aria-label="Slide 4"
-        ></button>
-    </div>
-  <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img class="d-block w-100" id="san-francisco" src="./assets/images/san-francisco-landing.jpg"/>
-            <div class="carousel-caption d-none d-md-block">
-                <h2>San Francisco</h2>
-            </div>
-        </div>
-         
-        
-        <div class="carousel-item">
-            <img class="d-block w-100" id="london" src="./assets/images/london-landing.webp"/>
-            <div class="carousel-caption d-none d-md-block">
-                <h2>London</h2>
-            </div>
-        </div>
-        
-        <div class="carousel-item">
-            <img class="d-block w-100" id="sydney" src="./assets/images/sydney-landing.jpg">
-            <div class="carousel-caption d-none d-md-block">
-                <h2>Sydney</h2>
-            </div>
-        </div>       
-        <div class="carousel-item">
-            <img class="d-block w-100" id="seattle" src="./assets/images/seattle-landing.jpg">
-            <div class="carousel-caption d-none d-md-block">
-                <h2>Seattle</h2>
-            </div>
-        </div>    
-    </div>    
-     
-<button class="carousel-control-prev" type="button" data-mdb-target="#san-francisco" data-mdb-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>   
-</div>
-    
-
-
-<script src="slideshow.component.js"></script> -->
+</section>
+<section class="description-section">
+  <app-description></app-description>
+</section>
