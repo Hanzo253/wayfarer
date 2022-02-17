@@ -9,9 +9,11 @@ import { CITIES } from './cities';
 export class CitiesComponent implements OnInit {
   
   cities: any = CITIES;
+  city: any;
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }
