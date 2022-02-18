@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CITIES } from '../cities';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-city',
@@ -13,7 +14,11 @@ export class CityComponent implements OnInit {
 
   city: any;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private modalService: NgbModal) { }
+
+  open(content: any) {
+    this.modalService.open(content, { centered: true });
+  }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
