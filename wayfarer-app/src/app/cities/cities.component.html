@@ -2,83 +2,19 @@
   class="d-flex align-items-center justify-content-center"
   style="height: 500px"
 >
-  <div class="bg-image ripple float-start px-2" data-mdb-ripple-color="light">
-    <img
-      id="sanfran"
-      src="../../assets/images/san-fran.jpg"
-      class="rounded hover-shadow"
-    />
-    <a href="#!">
+  <div
+    class="bg-image ripple float-start px-2"
+    data-mdb-ripple-color="light"
+    *ngFor="let city of cities"
+  >
+    <img id="sanfran" src="{{ city.imgUrl }}" class="rounded hover-shadow" />
+    <a routerLink="/cities/{{ city.id }}">
       <div class="mask">
         <div
           class="d-flex justify-content-center align-items-center h-100"
           id="sanfran"
         >
-          <p>San Francisco</p>
-        </div>
-      </div>
-      <div class="hover-overlay">
-        <div
-          class="mask"
-          style="background-color: rgba(251, 251, 251, 0.2)"
-        ></div>
-      </div>
-    </a>
-  </div>
-
-  <div class="bg-image ripple float-start px-2" data-mdb-ripple-color="light">
-    <img
-      id="sanfran"
-      src="../../assets/images/london.jpg"
-      class="rounded hover-shadow"
-    />
-    <a href="#!">
-      <div class="mask">
-        <div
-          class="d-flex justify-content-center align-items-center h-100"
-          id="sanfran"
-        >
-          <p>London</p>
-        </div>
-      </div>
-      <div class="hover-overlay">
-        <div
-          class="mask"
-          style="background-color: rgba(251, 251, 251, 0.2)"
-        ></div>
-      </div>
-    </a>
-  </div>
-
-  <div class="bg-image ripple float-start px-2" data-mdb-ripple-color="light">
-    <img id="sanfran" src="../../assets/images/sydney.jpg" class="rounded" />
-    <a href="#!">
-      <div class="mask">
-        <div
-          class="d-flex justify-content-center align-items-center h-100"
-          id="sanfran"
-        >
-          <p>Sydney</p>
-        </div>
-      </div>
-      <div class="hover-overlay">
-        <div
-          class="mask"
-          style="background-color: rgba(251, 251, 251, 0.2)"
-        ></div>
-      </div>
-    </a>
-  </div>
-
-  <div class="bg-image ripple float-start px-2" data-mdb-ripple-color="light">
-    <img id="sanfran" src="../../assets/images/seattle.jpg" class="rounded" />
-    <a href="#!">
-      <div class="mask">
-        <div
-          class="d-flex justify-content-center align-items-center h-100"
-          id="sanfran"
-        >
-          <p>Seattle</p>
+          <p>{{ city.name }}</p>
         </div>
       </div>
       <div class="hover-overlay">
@@ -90,3 +26,5 @@
     </a>
   </div>
 </div>
+
+<router-outlet></router-outlet>

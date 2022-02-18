@@ -3,26 +3,26 @@ import { ActivatedRoute } from '@angular/router';
 import { CITIES } from '../cities';
 
 @Component({
-  selector: 'app-city',
-  templateUrl: './city.component.html',
-  styleUrls: ['./city.component.css']
+  selector: 'app-post',
+  templateUrl: './post.component.html',
+  styleUrls: ['./post.component.css']
 })
-export class CityComponent implements OnInit {
+export class PostComponent implements OnInit {
 
   cities: any = CITIES;
-
   city: any;
+  posts: any;
 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe(params => {
-      this.city = CITIES.find(city => {
+    this.route.paramMap
+    .subscribe(params => {
+      this.cities = CITIES.find(cities => {
         let paramId: string = params.get('id') || '';
-        return city.id === parseInt(paramId);
+        return cities.id === parseInt(paramId);
       })
     });
-    console.log(this.city);
   }
 
 }

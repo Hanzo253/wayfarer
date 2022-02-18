@@ -5,15 +5,7 @@
   </div>
   <nav class="header-nav">
     <ul class="header-nav-list">
-      <li>
-        <a
-          routerLink="/cities"
-          class="header-nav-link"
-          (click)="toggleShowComponent()"
-        >
-          Cities
-        </a>
-      </li>
+      <li><a routerLink="/cities" class="header-nav-link">Cities</a></li>
       <li>
         <app-search-bar></app-search-bar>
       </li>
@@ -33,3 +25,5 @@
     </ul>
   </nav>
 </header>
+
+<router-outlet></router-outlet>
