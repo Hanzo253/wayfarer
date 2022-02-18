@@ -18,6 +18,10 @@
   height: 100%;
 }
 
+.weather-section {
+  text-align: center;
+}
+
 .create-btn-container {
   position: relative;
   padding: 5rem;
@@ -26,7 +30,7 @@
 .create-btn {
   position: absolute;
   left: 20%;
-  bottom: 40%;
+  bottom: 25%;
   z-index: 999;
 }
 

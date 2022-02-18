@@ -8,7 +8,7 @@
     *ngFor="let city of cities"
   >
     <img id="sanfran" src="{{ city.imgUrl }}" class="rounded hover-shadow" />
-    <a routerLink="/cities/{{ city.id }}">
+    <a routerLink="/cities/{{ city.name }}">
       <div class="mask">
         <div
           class="d-flex justify-content-center align-items-center h-100"
@@ -27,4 +27,4 @@
   </div>
 </div>
 
-<router-outlet></router-outlet>
+<router-outlet #target></router-outlet>

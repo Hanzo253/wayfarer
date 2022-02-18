@@ -1,5 +1,17 @@
 <section class="homepage-section">
   <h1 class="homepage-heading">{{ city.name }}</h1>
+  <!-- <button class="btn btn-primary" (click)="findWeather('London')">
+    View Weather
+  </button> -->
+  <section class="weather-section" *ngIf="weather">
+    <p class="weather-description">
+      Currently {{ weather.weather[0].description }}
+    </p>
+    <p class="weather-temperature">
+      There's a high of {{ weather.main.temp_max }} ° F and a low of
+      {{ weather.main.temp_min }} ° F.
+    </p>
+  </section>
   <div class="cover">
     <img
       src="{{ city.coverImgUrl }}"
