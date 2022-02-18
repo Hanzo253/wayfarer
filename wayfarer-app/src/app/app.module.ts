@@ -11,6 +11,7 @@ import { CitiesDirective } from './cities.directive';
 import { DescriptionComponent } from './description/description.component';
 import { CityComponent } from './city/city.component';
 import { SearchBarComponent } from './nav-bar/search-bar/search-bar.component';
+import { FormsModule } from '@angular/forms';
 // import { SearchService } from './nav-bar/search.service';
 
 @NgModule({
@@ -27,7 +28,8 @@ import { SearchBarComponent } from './nav-bar/search-bar/search-bar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [], //<---don't forget to add the SearchService back
   bootstrap: [AppComponent]

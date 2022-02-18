@@ -15,16 +15,21 @@
         </a>
       </li>
       <li>
+        <app-search-bar></app-search-bar>
+      </li>
+      <!-- <li>
         <form class="d-flex">
           <input
             class="form-control me-2"
+            [(ngModel)]="city"
             type="search"
             placeholder="Search Cities"
-            aria-label="Search"  
+            aria-label="Search" 
+            (keyup)="findCity(city)" 
           />
           <button class="btn btn-primary" type="submit">Search</button>
         </form>
-      </li>
+      </li> -->
     </ul>
   </nav>
 </header>
