@@ -8,15 +8,16 @@ export const CITIES = [
             title: 'Trip with friend',
             user: 'Jermaine',
             body: 'had lots of fun',
+            imgForPost: 'assets/images/san-francisco-post1.jpg'
         }, {
             title: 'Getaway',
             user: 'Mike',
             body: 'need this break from the real world',
             imgForPost: 'assets/images/san-francisco-post2.jpg'
         },{
-            title: '',
-            user: '',
-            body: '',
+            title: 'Greatest Trip of my life',
+            user: 'Sam Smith',
+            body: 'Hope everyone enjoys this post as much as I do!',
             imgForPost: 'assets/images/san-francisco-post3.jpg'
         }] ,
     }, {
@@ -25,20 +26,20 @@ export const CITIES = [
         imgUrl: 'assets/images/london.jpg',
         postImgUrl: 'assets/images/london-header.jpg',
         posts: [{
-            title: '',
-            user: '',
-            body: '',
-            imgForPost: 'assets/images/san-francisco-header.jpg'
+            title: 'Amazing trip',
+            user: 'Micah',
+            body: 'On the greatest bridge in the world! Had a great time',
+            imgForPost: 'assets/images/london-post1.jpg'
         }, {
-            title: '',
-            user: '',
-            body: '',
-            imgForPost: 'assets/images/san-francisco-header.jpg'
+            title: 'Never knew I loved food',
+            user: 'Sara',
+            body: 'Who knew I was such a foodie so glad I went on this trip!',
+            imgForPost: 'assets/images/london-post2.jpg'
         },{
-            title: '',
-            user: '',
-            body: '',
-            imgForPost: 'assets/images/san-francisco-header.jpg'
+            title: 'First Trip',
+            user: 'Melissa',
+            body: 'My first trip with my sister might be the best trip of my life!',
+            imgForPost: 'assets/images/london-post3.jpg'
         }]
     },{
         id:3,
@@ -49,17 +50,17 @@ export const CITIES = [
             title: '',
             user: '',
             body: '',
-            imgForPost: 'assets/images/san-francisco-header.jpg'
+            imgForPost: 'assets/images/sydney-post1.jpg'
         },{
             title: '',
             user: '',
             body: '',
-            imgForPost: 'assets/images/san-francisco-header.jpg'
+            imgForPost: 'assets/images/sydney-post2.jpg'
         },{
             title: '',
             user: '',
             body: '',
-            imgForPost: 'assets/images/san-francisco-header.jpg'
+            imgForPost: 'assets/images/sydney-post3.jpg'
         }]
     }, {
         id:4,
@@ -70,17 +71,17 @@ export const CITIES = [
             title: '',
             user: '',
             body: '',
-            imgForPost: 'assets/images/san-francisco-header.jpg'
+            imgForPost: 'assets/images/seattle-post1.jpg'
         },{
             title: '',
             user: '',
             body: '',
-            imgForPost: 'assets/images/san-francisco-header.jpg'
+            imgForPost: 'assets/images/seattle-post2.jpg'
         },{
             title: '',
             user: '',
             body: '',
-            imgForPost: 'assets/images/san-francisco-header.jpg'
+            imgForPost: 'assets/images/seattle-post3.jpg'
         }]
     }
 ]
