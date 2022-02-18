@@ -10,6 +10,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { CitiesDirective } from './cities.directive';
 import { DescriptionComponent } from './description/description.component';
 import { CityComponent } from './city/city.component';
+import { SearchBarComponent } from './nav-bar/search-bar/search-bar.component';
 // import { SearchService } from './nav-bar/search.service';
 
 @NgModule({
@@ -20,7 +21,8 @@ import { CityComponent } from './city/city.component';
     NavBarComponent,
     CitiesDirective,
     DescriptionComponent,
-    CityComponent
+    CityComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,
