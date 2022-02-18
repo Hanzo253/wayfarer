@@ -31,7 +31,24 @@
         (click)="modal.dismiss()"
       ></button>
     </div>
-    <div class="modal-body"></div>
+    <div class="modal-body">
+      <form>
+        <div class="mb-3">
+          <label for="title-name" class="col-form-label">Title</label>
+          <input type="text" class="form-control" id="title-name" />
+        </div>
+        <div class="mb-3">
+          <label for="author-name" class="col-form-label">Author</label>
+          <input type="text" class="form-control" id="author-name" />
+        </div>
+        <div class="mb-3">
+          <label for="description-text" class="col-form-label">
+            Description:
+          </label>
+          <textarea class="form-control" id="description-text"></textarea>
+        </div>
+      </form>
+    </div>
     <div class="modal-footer">
       <button
         type="button"
@@ -40,9 +57,15 @@
       >
         Close
       </button>
+      <button type="button" class="btn btn-success" (click)="modal.close()">
+        Submit
+      </button>
     </div>
   </ng-template>
-  <button class="btn btn-lg btn-primary create-btn" (click)="open(postContent)">
+  <button
+    class="btn btn-lg btn-primary create-btn"
+    (click)="openCreatePost(postContent)"
+  >
     Create Post
   </button>
 </div>

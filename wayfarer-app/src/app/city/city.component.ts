@@ -33,6 +33,10 @@ export class CityComponent implements OnInit {
     this.modalService.open(content, { centered: true });
   }
 
+  openCreatePost(postContent: any) {
+    this.modalService.open(postContent);
+  }
+
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       this.city = CITIES.find(city => {
