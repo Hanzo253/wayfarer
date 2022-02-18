@@ -1,0 +1,20 @@
+.homepage-section {
+  width: 100vw;
+  height: 100vh;
+}
+
+.homepage-heading {
+  text-align: center;
+}
+
+.cover {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  height: 500px;
+}
+
+.cover-img {
+  width: 90%;
+  /* height: 100%; */
+}

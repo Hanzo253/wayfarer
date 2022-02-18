@@ -1,0 +1,58 @@
+.picsum-img-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 0;
+  transition: all 500ms ease;
+
+  overflow: hidden;
+  position: relative;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.city-pics {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  height: 500px;
+  min-width: 1000px;
+  background-position: center center;
+  background-size: cover;
+}
+
+.carousel-caption {
+  font-family: "Open Sans", sans-serif;
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 3em;
+  color: #fff3bf;
+}
+
+span {
+  font-style: italic;
+}
+
+.description-div {
+  margin: 25px;
+  border-radius: 5px;
+  border: 4px solid #1864ab;
+  width: 920px;
+}
+
+.description {
+  margin: 25px;
+}
+
+.slideshow-section {
+  height: 51.7vh;
+  background-color: #023047;
+}
+
+.description-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

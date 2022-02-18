@@ -1,0 +1,31 @@
+#sanfran {
+  height: 200px;
+  width: 200px;
+  color: aliceblue;
+}
+
+.wrapper {
+  height: 200px;
+  width: 200px;
+  background: transparent no-repeat center;
+  background-size: auto;
+  background-image: url("../../assets/images/london.jpg");
+}
+
+.sydney {
+  background-image: url("../../assets/images/sydney.jpg");
+  background-repeat: no-repeat center;
+  background-size: auto;
+  color: darkblue;
+  height: 200px;
+  width: 200px;
+}
+
+#seattle {
+  background-image: url("../../assets/images/seattle.jpg");
+  background-repeat: no-repeat center;
+  background-size: auto;
+  color: darkblue;
+  height: 200px;
+  width: 200px;
+}
