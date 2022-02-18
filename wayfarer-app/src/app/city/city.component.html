@@ -21,7 +21,30 @@
   </div>
 </section>
 <div class="create-btn-container">
-  <button class="btn btn-lg btn-primary create-btn">Create Post</button>
+  <ng-template #postContent let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Create a post</h4>
+      <button
+        type="button"
+        class="btn-close"
+        aria-label="Close"
+        (click)="modal.dismiss()"
+      ></button>
+    </div>
+    <div class="modal-body"></div>
+    <div class="modal-footer">
+      <button
+        type="button"
+        class="btn btn-outline-dark"
+        (click)="modal.close()"
+      >
+        Close
+      </button>
+    </div>
+  </ng-template>
+  <button class="btn btn-lg btn-primary create-btn" (click)="open(postContent)">
+    Create Post
+  </button>
 </div>
 <section class="posts-section">
   <div class="post-container" *ngFor="let post of city.posts; index as i">

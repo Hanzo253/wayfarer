@@ -16,7 +16,7 @@ export class CityComponent implements OnInit {
 
   city: any;
 
-  @Input() cityName: string = "London";
+  @Input() cityName: string = "";
 
   weather: any;
 
@@ -43,12 +43,24 @@ export class CityComponent implements OnInit {
       })
     });
     this.searchSubject.subscribe(cityName => {
-      this.weatherService.createAPIObservable(cityName)
-      .subscribe(response => {
-        console.log(response);
+      this.route.paramMap.subscribe(params => {
+        cityName = CITIES.find(city => {
+          let paramName: string = params.get('name') || '';
+          // console.log(paramName);
+          this.weatherService.createAPIObservable(paramName)
+          .subscribe(response => {
+              // console.log(response);
         
-        this.weather = response;      
+              this.weather = response;      
+          })
+        })
       })
+      // this.weatherService.createAPIObservable(cityName)
+      // .subscribe(response => {
+      //   console.log(response);
+        
+      //   this.weather = response;      
+      // })
     })
     this.findWeather(this.cityName);
   }

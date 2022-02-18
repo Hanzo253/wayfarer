@@ -8,8 +8,8 @@ export class WeatherService {
 
   constructor(private http: HttpClient) { }
 
-  createAPIObservable(zip: any) {
+  createAPIObservable(cityName: any) {
     return this.http
-    .get(`http://api.openweathermap.org/data/2.5/weather?q=London&appid=fe5e3fefd2dff0a4c3240a2ccfd11aba`)
+    .get(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=fe5e3fefd2dff0a4c3240a2ccfd11aba`)
   }
 }
