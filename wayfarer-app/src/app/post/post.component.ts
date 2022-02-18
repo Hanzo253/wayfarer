@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CITIES } from '../cities/cities';
 import { ActivatedRoute } from '@angular/router';
+import { CITIES } from '../cities';
 
 @Component({
   selector: 'app-post',
@@ -9,11 +9,9 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class PostComponent implements OnInit {
 
-  cities: any =CITIES;
+  cities: any = CITIES;
   city: any;
   post: any;
-
-
 
   constructor(private route: ActivatedRoute) { }
 

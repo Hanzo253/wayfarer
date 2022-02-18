@@ -2,19 +2,19 @@
   class="d-flex align-items-center justify-content-center"
   style="height: 500px"
 >
-  <div *ngFor="let city of cities" class="bg-image ripple float-start px-2" data-mdb-ripple-color="light">
-    <img
-      id="sanfran"
-      src="{{city.imgUrl}}"
-      class="rounded hover-shadow"
-    />
-    <a routerLink="/cities/{{city.id}}">
+  <div
+    class="bg-image ripple float-start px-2"
+    data-mdb-ripple-color="light"
+    *ngFor="let city of cities"
+  >
+    <img id="sanfran" src="{{ city.imgUrl }}" class="rounded hover-shadow" />
+    <a routerLink="/cities/{{ city.id }}">
       <div class="mask">
         <div
           class="d-flex justify-content-center align-items-center h-100"
           id="sanfran"
         >
-          <p>{{city.name}}</p>
+          <p>{{ city.name }}</p>
         </div>
       </div>
       <div class="hover-overlay">
@@ -25,7 +25,6 @@
       </div>
     </a>
   </div>
-<router-outlet></router-outlet>
+</div>
 
-<section class="homepage-heading">
-</section>
+<router-outlet></router-outlet>

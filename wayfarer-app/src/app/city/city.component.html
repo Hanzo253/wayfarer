@@ -1,19 +1,65 @@
-<h1 class="homepage-heading">{{city.name}}</h1>
-<div class="cover">
-  <img
-    src="{{city.postImgUrl}}"
-    alt="San Francisco Header"
-    class="cover-img"
-  />
+<section class="homepage-section">
+  <h1 class="homepage-heading">{{ city.name }}</h1>
+  <div class="cover">
+    <img
+      src="{{ city.coverImgUrl }}"
+      alt="San Francisco Header"
+      class="cover-img"
+    />
+  </div>
+</section>
+<div class="create-btn-container">
+  <button class="btn btn-lg btn-primary create-btn">Create Post</button>
 </div>
-<div *ngFor="let post of city.posts; index as i;">
-  <!-- <div class="col-sm-8"> -->
-    <h1>
-      <!-- <a routerLink="/cities/{{city.id}}/posts/{{post.title}}">{{city.name}}{{post.title}}</a> -->
-    </h1>
-    <a routerLink="/cities/{{city.id}}/posts/{{i}}" >{{post.title}} </a> 
-    <h2>{{post.user}}</h2>
-    <p>{{post.body}}</p>
-    <!-- <img src="{{post.imgForPost}}" class="w-10"/> -->
-  <!-- </div> -->
-</div>
+<section class="posts-section">
+  <div class="post-container" *ngFor="let post of city.posts; index as i">
+    <div class="card-group">
+      <div class="card px-50 float-start" style="width: 18rem">
+        <img
+          src="../assets/images/san-francisco-post1.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body px-50">
+          <h5 class="card-title">Post for {{ city.name }}</h5>
+          <p class="card-text">
+            {{ post.title }}
+          </p>
+          <ng-template #content let-modal>
+            <div class="modal-header">
+              <h4 class="modal-title" id="modal-basic-title">Post</h4>
+              <button
+                type="button"
+                class="btn-close"
+                aria-label="Close"
+                (click)="modal.dismiss()"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p>{{ post.body }}</p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-outline-dark"
+                (click)="modal.close()"
+              >
+                Close
+              </button>
+            </div>
+          </ng-template>
+          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+          <button
+            class="btn btn-lg btn-outline-primary"
+            (click)="open(content)"
+          >
+            View post
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- {{ city.name }}{{ post.title }} -->
+    <!-- </a> -->
+    <!-- <p>{{ post.body }}</p> -->
+  </div>
+</section>
