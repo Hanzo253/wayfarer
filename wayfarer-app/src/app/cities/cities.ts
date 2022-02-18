@@ -5,13 +5,19 @@ export const CITIES = [
         imgUrl: "assets/images/san-fran.jpg",
         postImgUrl: 'assets/images/san-francisco-header.jpg',
         posts: [{
-            title: '',
-            user: '',
-            body: ''
+            title: 'Trip with friend',
+            user: 'Jermaine',
+            body: 'had lots of fun',
         }, {
+            title: 'Getaway',
+            user: 'Mike',
+            body: 'need this break from the real world',
+            imgForPost: 'assets/images/san-francisco-post2.jpg'
+        },{
             title: '',
             user: '',
-            body: ''
+            body: '',
+            imgForPost: 'assets/images/san-francisco-post3.jpg'
         }] ,
     }, {
         id: 2,
@@ -21,11 +27,18 @@ export const CITIES = [
         posts: [{
             title: '',
             user: '',
-            body: ''
+            body: '',
+            imgForPost: 'assets/images/san-francisco-header.jpg'
         }, {
             title: '',
             user: '',
-            body: ''
+            body: '',
+            imgForPost: 'assets/images/san-francisco-header.jpg'
+        },{
+            title: '',
+            user: '',
+            body: '',
+            imgForPost: 'assets/images/san-francisco-header.jpg'
         }]
     },{
         id:3,
@@ -35,11 +48,18 @@ export const CITIES = [
         posts: [{
             title: '',
             user: '',
-            body: ''
+            body: '',
+            imgForPost: 'assets/images/san-francisco-header.jpg'
         },{
             title: '',
             user: '',
-            body: ''
+            body: '',
+            imgForPost: 'assets/images/san-francisco-header.jpg'
+        },{
+            title: '',
+            user: '',
+            body: '',
+            imgForPost: 'assets/images/san-francisco-header.jpg'
         }]
     }, {
         id:4,
@@ -49,11 +69,18 @@ export const CITIES = [
         posts: [{
             title: '',
             user: '',
-            body: ''
+            body: '',
+            imgForPost: 'assets/images/san-francisco-header.jpg'
         },{
             title: '',
             user: '',
-            body: ''
+            body: '',
+            imgForPost: 'assets/images/san-francisco-header.jpg'
+        },{
+            title: '',
+            user: '',
+            body: '',
+            imgForPost: 'assets/images/san-francisco-header.jpg'
         }]
     }
 ]
