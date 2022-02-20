@@ -16,11 +16,7 @@
             aria-label="Search"
             (keydown.enter)="onKeydownEvent(city)"
           />
-          <button
-            routerLink="/cities/{{ city }}"
-            (click)="findCity(city)"
-            class="btn btn-primary"
-          >
+          <button (click)="findCity(city)" class="btn btn-primary">
             Search
           </button>
         </div>

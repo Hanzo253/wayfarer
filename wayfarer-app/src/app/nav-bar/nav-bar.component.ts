@@ -1,6 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { SlideshowService } from '../services/slideshow/slideshow.service';
-import { Subject } from 'rxjs';
+import { debounceTime, Subject, distinctUntilChanged } from 'rxjs';
 import { Router } from '@angular/router';
 
 @Component({
@@ -20,23 +20,52 @@ export class NavBarComponent implements OnInit {
     //alerts that a certain event is firing, whenever a certain event is firing => i want to return something
     //how the event is published
     //once event fires, it runs the api call
-    this.searchSubject.next(city);
-    
+    if (city === "San Francisco" || city === "Seattle" || city === "Sydney" || city === "London") {
+      this.searchSubject.next(city);
+      this.router.navigate([`/cities/${this.lowerCaseWord(city)}`]);
+    } else {
+      alert("City not avaliable.");
+    }
   }
 
   toggleShowComponent() {
     this.slideShowService.toggleShowComponent();
   }
 
+  //capitalizes every WORD in city names
+  capitalizeEveryWord(name: string){
+    return name.replace(/\w\S*/g, function(name){
+      return name.charAt(0).toUpperCase() + name.substr(1).toLowerCase();
+    });
+  }
+
+  lowerCaseWord(name: any) {
+    if (name === undefined) {
+      console.log("Waiting for input");
+      if (name !== undefined) {
+        return name.toLowerCase();
+      }
+    } else {
+        return name.toLowerCase();
+    }
+  }
+
   onKeydownEvent(city: any){
-    this.searchSubject.next(city);
-    //necessary with key events
-    this.router.navigate([`/cities/${city}`]);
+    // this.searchSubject.next(city);
+    // //necessary with key events
+    // this.router.navigate([`/cities/${this.lowerCaseWord(city)}`]);
+    if (city === "San Francisco" || city === "Seattle" || city === "Sydney" || city === "London") {
+      this.searchSubject.next(city);
+      this.router.navigate([`/cities/${this.lowerCaseWord(city)}`]);
+    } else {
+      alert("City not avaliable.");
+    }
   }
 
 
   ngOnInit(): void {
-    this.searchSubject.subscribe(city => {
+    this.searchSubject
+    .subscribe(city => {
       console.log(city); 
     });
   }
