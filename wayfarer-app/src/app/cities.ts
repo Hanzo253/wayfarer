@@ -1,8 +1,8 @@
 export const CITIES = [
     {
         id: 1,
-        name: 'San Francisco',
-        imgUrl: "assets/images/san-fran.jpg",
+        name: 'san francisco',
+        imgUrl: 'assets/images/san-fran.jpg',
         coverImgUrl: 'assets/images/san-francisco-header.jpg',
         posts: [{
             title: 'Trip with friend',
@@ -28,7 +28,7 @@ export const CITIES = [
         }] ,
     }, {
         id: 2,
-        name: 'London',
+        name: 'london',
         imgUrl: 'assets/images/london.jpg',
         coverImgUrl: 'assets/images/london-header.jpg',
         posts: [{
@@ -55,7 +55,7 @@ export const CITIES = [
         }]
     },{
         id:3,
-        name: 'Sydney',
+        name: 'sydney',
         imgUrl: 'assets/images/sydney.jpg',
         coverImgUrl: 'assets/images/sydney-header.jpg',
         posts: [{
@@ -82,7 +82,7 @@ export const CITIES = [
         }]
     }, {
         id:4,
-        name: 'Seattle',
+        name: 'seattle',
         imgUrl: 'assets/images/seattle.jpg',
         coverImgUrl: 'assets/images/seattle-header.jpg',
         posts: [{

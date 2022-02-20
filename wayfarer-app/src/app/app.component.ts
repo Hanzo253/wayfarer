@@ -11,8 +11,14 @@ export class AppComponent implements OnInit{
   showComponent: boolean = this.slideShowService.getShowComponent();
   postArr: string[] = Array(3).fill('post');
 
+
   constructor(private slideShowService: SlideshowService) {
   }
+
+  onKeyDownEvent(event: any){
+    console.log(event.target.value);
+  }
+
 
   ngOnInit() {
   }

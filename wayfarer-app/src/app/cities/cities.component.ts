@@ -12,6 +12,13 @@ export class CitiesComponent implements OnInit {
 
   constructor() { }
 
+  //intialized here for city icon labels
+  capitalizeEveryWord(name: string){
+    return name.replace(/\w\S*/g, function(name){
+      return name.charAt(0).toUpperCase() + name.substr(1).toLowerCase();
+  });
+  }
+
   ngOnInit(): void {
   }
 

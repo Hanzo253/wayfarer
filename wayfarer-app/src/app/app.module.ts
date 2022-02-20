@@ -10,6 +10,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { CitiesDirective } from './cities.directive';
 import { DescriptionComponent } from './description/description.component';
 import { CityComponent } from './city/city.component';
+import { FormsModule } from '@angular/forms';
+
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -26,6 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    FormsModule,
     HttpClientModule
   ],
   providers: [],

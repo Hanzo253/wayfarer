@@ -37,6 +37,13 @@ export class CityComponent implements OnInit {
     this.modalService.open(postContent);
   }
 
+  //capitalizes every WORD in city names
+  capitalizeEveryWord(name: string){
+    return name.replace(/\w\S*/g, function(name){
+      return name.charAt(0).toUpperCase() + name.substr(1).toLowerCase();
+  });
+  }
+
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       this.city = CITIES.find(city => {
