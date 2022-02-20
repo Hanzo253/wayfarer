@@ -8,13 +8,13 @@
     *ngFor="let city of cities"
   >
     <img id="sanfran" src="{{ city.imgUrl }}" class="rounded hover-shadow" />
-    <a routerLink="/cities/{{ city.id }}">
+    <a routerLink="/cities/{{ city.name }}">
       <div class="mask">
         <div
           class="d-flex justify-content-center align-items-center h-100"
           id="sanfran"
         >
-          <p>{{ city.name }}</p>
+          <p>{{ capitalizeEveryWord(city.name) }}</p>
         </div>
       </div>
       <div class="hover-overlay">

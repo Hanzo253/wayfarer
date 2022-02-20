@@ -15,7 +15,7 @@ const routes: Routes = [
     component: CitiesComponent,
     children: [
       {
-        path: ':id',
+        path: ':name',
         component: CityComponent
       },
       {
