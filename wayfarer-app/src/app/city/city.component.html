@@ -71,49 +71,40 @@
 </div>
 <section class="posts-section">
   <div class="post-container" *ngFor="let post of city.posts; index as i">
-    <div class="card-group">
-      <div class="card px-50 float-start" style="width: 18rem">
-        <img
-          src="../assets/images/san-francisco-post1.jpg"
-          class="card-img-top"
-          alt="..."
-        />
-        <div class="card-body px-50">
-          <h5 class="card-title">Post for {{ city.name }}</h5>
-          <p class="card-text">
-            {{ post.title }}
-          </p>
-          <ng-template #content let-modal>
-            <div class="modal-header">
-              <h4 class="modal-title" id="modal-basic-title">Post</h4>
-              <button
-                type="button"
-                class="btn-close"
-                aria-label="Close"
-                (click)="modal.dismiss()"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <p>{{ post.body }}</p>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-outline-dark"
-                (click)="modal.close()"
-              >
-                Close
-              </button>
-            </div>
-          </ng-template>
-          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-          <button
-            class="btn btn-lg btn-outline-primary"
-            (click)="open(content)"
-          >
-            View post
-          </button>
-        </div>
+    <div class="card px-50 float-start">
+      <img src="{{ post.imgForPost }}" class="card-img-top" alt="post image" />
+      <div class="card-body px-50">
+        <h5 class="card-title">{{ post.title }}</h5>
+        <!-- <p class="card-text">
+          {{ post.title }}
+        </p> -->
+        <ng-template #content let-modal>
+          <div class="modal-header">
+            <h4 class="modal-title" id="modal-basic-title">{{ post.title }}</h4>
+            <button
+              type="button"
+              class="btn-close"
+              aria-label="Close"
+              (click)="modal.dismiss()"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>{{ post.body }}</p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline-dark"
+              (click)="modal.close()"
+            >
+              Close
+            </button>
+          </div>
+        </ng-template>
+        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        <button class="btn btn-lg btn-outline-primary" (click)="open(content)">
+          View post
+        </button>
       </div>
     </div>
     <!-- {{ city.name }}{{ post.title }} -->
