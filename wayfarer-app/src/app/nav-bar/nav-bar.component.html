@@ -5,25 +5,28 @@
   </div>
   <nav class="header-nav">
     <ul class="header-nav-list">
-      <li><a routerLink="/cities" class="header-nav-link">Cities</a></li> 
+      <li><a routerLink="/cities" class="header-nav-link">Cities</a></li>
       <li>
         <div class="d-flex">
-          <input 
+          <input
             class="form-control me-2"
-            [(ngModel)]="city" 
+            [(ngModel)]="city"
             type="search"
             placeholder="Search Cities"
-            aria-label="Search"  
-            (keydown.enter)= "onKeydownEvent(city)" 
+            aria-label="Search"
+            (keydown.enter)="onKeydownEvent(city)"
           />
-           <button routerLink="/cities/{{city}}" (click)="findCity(city)" class="btn btn-primary" >Search</button>
-              
+          <button
+            routerLink="/cities/{{ city }}"
+            (click)="findCity(city)"
+            class="btn btn-primary"
+          >
+            Search
+          </button>
         </div>
-         
       </li>
     </ul>
   </nav>
 </header>
-
 
 <router-outlet></router-outlet>
