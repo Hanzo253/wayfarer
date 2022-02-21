@@ -1,9 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { CITIES } from '../cities';
+import { CITIES } from '../cities/cities';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Subject } from 'rxjs';
 import { WeatherService } from '../services/weather/weather.service';
+import { userPost } from './userPost';
 
 @Component({
   selector: 'app-city',
@@ -15,6 +16,11 @@ export class CityComponent implements OnInit {
   cities: any = CITIES;
 
   city: any;
+
+  // title : any;
+   
+  userPost = new userPost('', 'Mike', 'Wish we could stay longer');
+ 
 
   @Input() cityName: string = "";
 
@@ -44,19 +50,21 @@ export class CityComponent implements OnInit {
     });
   }
 
+  onSubmit(){
+    console.log(this.userPost)
+  }
+
+  // storeTitleValue() {
+  //   if (this.title)
+  // }
+
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       this.city = CITIES.find(city => {
-<<<<<<< HEAD
-        
-        let paramId: string = params.get('id') || '';
-        return city.id === parseInt(paramId);
-=======
         // let paramId: string = params.get('id') || '';
         let paramName: string = params.get('name') || '';
         // return city.id === parseInt(paramId);
         return city.name === paramName;
->>>>>>> ad9ea99dfe830ee167af453c4130663cd6e49ada
       })
     });
     this.searchSubject.subscribe(cityName => {

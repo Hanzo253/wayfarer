@@ -31,23 +31,39 @@
         (click)="modal.dismiss()"
       ></button>
     </div>
+
     <div class="modal-body">
-      <form>
+      <form #Post="ngForm">
+  
+
         <div class="mb-3">
           <label for="title-name" class="col-form-label">Title</label>
-          <input type="text" class="form-control" id="title-name" />
+          <input [(ngModel)]="userPost.title" 
+          required #title="ngModel" name="title" 
+          type="text" [class.is-invalid]="title.invalid && title.touched" 
+          class="form-control" id="title-name" />
+          <small class="text-danger"  [class.d-none]="title.valid || title.untouched" >Title is required</small>
         </div>
+          
+
         <div class="mb-3">
           <label for="author-name" class="col-form-label">Author</label>
-          <input type="text" class="form-control" id="author-name" />
+          <input [(ngModel)]="userPost.author"   
+          name="author"  #author="ngModel"   type="text" required  [class.is-invalid]="author.invalid && author.touched" 
+          class="form-control" id="author-name"/>
+          <small class="text-danger"   [class.d-none]="author.valid || author.untouched" >Author is required</small>
         </div>
+
+
         <div class="mb-3">
           <label for="description-text" class="col-form-label">
             Description:
           </label>
-          <textarea class="form-control" id="description-text"></textarea>
+          <textarea [(ngModel)]="userPost.description"  name="description"  class="form-control" id="description-text"></textarea>
         </div>
       </form>
+
+
     </div>
     <div class="modal-footer">
       <button
@@ -57,7 +73,7 @@
       >
         Close
       </button>
-      <button type="button" class="btn btn-success" (click)="modal.close()">
+      <button type="button" class="btn btn-success" (click)="onSubmit()">
         Submit
       </button>
     </div>
