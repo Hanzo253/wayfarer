@@ -14,12 +14,12 @@ import { userPost } from './userPost';
 export class CityComponent implements OnInit {
 
   cities: any = CITIES;
-
   city: any;
-
+  posts: any = CITIES[0].posts
+  postTitle: any = CITIES[0].posts;
   // title : any;
    
-  userPost = new userPost('', 'Mike', 'Wish we could stay longer');
+  // bigPost = new userPost('Great Trip', 'Mike', 'Wish we could stay longer');
  
 
   @Input() cityName: string = "";
@@ -50,8 +50,32 @@ export class CityComponent implements OnInit {
     });
   }
 
-  onSubmit(){
-    console.log(this.userPost)
+  onSubmit(title:string, user:string, body:string, image: string){
+    // for(let i = 4; i < this.postTitle.length ; i++){
+    //   this.postTitle[i] = 'fsdfsdf'
+
+    // }
+    // console.log(this.posts.push(this.postTitle))
+    // 
+    // this.postTitle = Object.assign(this.postTitle,{
+    //   title: title, user:user, body: description
+    // });
+    this.posts.push(new userPost(title, user, body, image))
+    console.log(this.posts)
+    console.log(this.city.name)
+
+    switch(this.city.name){
+        case 'san francisco'
+    }
+    // this.route.paramMap.subscribe(params => {
+    //   CITIES.find(() => {
+    //     let paramId: string = params.get('id') || '';
+    //     // CITIES[parseInt(paramId)].posts.push(new userPost(title, user, body, image))
+    //     console.log(CITIES[parseInt(paramId)])
+    //     console.log(paramId)
+    //     // console.log(this.posts)
+    //   })
+    // });
   }
 
   // storeTitleValue() {

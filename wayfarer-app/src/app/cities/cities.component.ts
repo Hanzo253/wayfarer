@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { CITIES } from '../cities';
+import { CITIES } from './cities';
 
 @Component({
   selector: 'app-cities',
