@@ -89,7 +89,12 @@
             ></button>
           </div>
           <div class="modal-body">
-            <p>{{ post.body }}</p>
+            <img
+              src="{{ post.imgForPost }}"
+              alt="view post image"
+              class="post-img"
+            />
+            <p class="post-description">{{ post.body }}</p>
           </div>
           <div class="modal-footer">
             <button
