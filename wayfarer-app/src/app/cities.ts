@@ -25,7 +25,7 @@ export const CITIES = [
             user: 'Sam Smith',
             body: 'Hope everyone enjoys this post as much as I do!',
             imgForPost: 'assets/images/san-francisco-post3.jpg'
-        }] ,
+        }],
     }, {
         id: 2,
         name: 'london',
