@@ -1,5 +1,17 @@
 <section class="homepage-section">
-  <h1 class="homepage-heading">{{ city.name }}</h1>
+  <h1 class="homepage-heading">{{ capitalizeEveryWord(city.name) }}</h1>
+  <!-- <button class="btn btn-primary" (click)="findWeather('London')">
+    View Weather
+  </button> -->
+  <section class="weather-section" *ngIf="weather">
+    <p class="weather-description">
+      Currently {{ weather.weather[0].description }}
+    </p>
+    <p class="weather-temperature">
+      There's a high of {{ weather.main.temp_max }} ° F and a low of
+      {{ weather.main.temp_min }} ° F.
+    </p>
+  </section>
   <div class="cover">
     <img
       src="{{ city.coverImgUrl }}"
@@ -9,53 +21,95 @@
   </div>
 </section>
 <div class="create-btn-container">
-  <button class="btn btn-lg btn-primary create-btn">Create Post</button>
+  <ng-template #postContent let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Create a post</h4>
+      <button
+        type="button"
+        class="btn-close"
+        aria-label="Close"
+        (click)="modal.dismiss()"
+      ></button>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="mb-3">
+          <label for="title-name" class="col-form-label">Title</label>
+          <input type="text" class="form-control" id="title-name" />
+        </div>
+        <div class="mb-3">
+          <label for="author-name" class="col-form-label">Author</label>
+          <input type="text" class="form-control" id="author-name" />
+        </div>
+        <div class="mb-3">
+          <label for="description-text" class="col-form-label">
+            Description:
+          </label>
+          <textarea class="form-control" id="description-text"></textarea>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button
+        type="button"
+        class="btn btn-outline-dark"
+        (click)="modal.close()"
+      >
+        Close
+      </button>
+      <button type="button" class="btn btn-success" (click)="modal.close()">
+        Submit
+      </button>
+    </div>
+  </ng-template>
+  <button
+    class="btn btn-lg btn-primary create-btn"
+    (click)="openCreatePost(postContent)"
+  >
+    Create Post
+  </button>
 </div>
 <section class="posts-section">
   <div class="post-container" *ngFor="let post of city.posts; index as i">
-    <div class="card-group">
-      <div class="card px-50 float-start" style="width: 18rem">
-        <img
-          src="../assets/images/san-francisco-post1.jpg"
-          class="card-img-top"
-          alt="..."
-        />
-        <div class="card-body px-50">
-          <h5 class="card-title">Post for {{ city.name }}</h5>
-          <p class="card-text">
-            {{ post.title }}
-          </p>
-          <ng-template #content let-modal>
-            <div class="modal-header">
-              <h4 class="modal-title" id="modal-basic-title">Post</h4>
-              <button
-                type="button"
-                class="btn-close"
-                aria-label="Close"
-                (click)="modal.dismiss()"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <p>{{ post.body }}</p>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-outline-dark"
-                (click)="modal.close()"
-              >
-                Close
-              </button>
-            </div>
-          </ng-template>
-          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-          <button
-            class="btn btn-lg btn-outline-primary"
-            (click)="open(content)"
-          >
-            View post
-          </button>
-        </div>
+    <div class="card px-50 float-start">
+      <img src="{{ post.imgForPost }}" class="card-img-top" alt="post image" />
+      <div class="card-body px-50">
+        <h5 class="card-title">{{ post.title }}</h5>
+        <!-- <p class="card-text">
+          {{ post.title }}
+        </p> -->
+        <ng-template #content let-modal>
+          <div class="modal-header">
+            <h4 class="modal-title" id="modal-basic-title">{{ post.title }}</h4>
+            <button
+              type="button"
+              class="btn-close"
+              aria-label="Close"
+              (click)="modal.dismiss()"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src="{{ post.imgForPost }}"
+              alt="view post image"
+              class="post-img"
+            />
+            <p class="post-description">{{ post.body }}</p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline-dark"
+              (click)="modal.close()"
+            >
+              Close
+            </button>
+          </div>
+        </ng-template>
+        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        <button class="btn btn-lg btn-outline-primary" (click)="open(content)">
+          View post
+        </button>
       </div>
     </div>
     <!-- {{ city.name }}{{ post.title }} -->

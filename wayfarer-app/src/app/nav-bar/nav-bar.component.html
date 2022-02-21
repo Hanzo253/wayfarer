@@ -7,15 +7,19 @@
     <ul class="header-nav-list">
       <li><a routerLink="/cities" class="header-nav-link">Cities</a></li>
       <li>
-        <form class="d-flex">
+        <div class="d-flex">
           <input
             class="form-control me-2"
+            [(ngModel)]="city"
             type="search"
-            placeholder="Search"
+            placeholder="Search Cities"
             aria-label="Search"
+            (keydown.enter)="onKeydownEvent(city)"
           />
-          <button class="btn btn-primary btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+          <button (click)="findCity(city)" class="btn btn-primary">
+            Search
+          </button>
+        </div>
       </li>
     </ul>
   </nav>

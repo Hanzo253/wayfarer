@@ -1,9 +1,9 @@
 export const CITIES = [
     {
         id: 1,
-        name: 'San Francsico',
-        imgUrl: "assets/images/san-fran.jpg",
-        postImgUrl: 'assets/images/san-francisco-header.jpg',
+        name: 'san francisco',
+        imgUrl: 'assets/images/san-fran.jpg',
+        coverImgUrl: 'assets/images/san-francisco-header.jpg',
         posts: [{
             title: 'Trip with friend',
             user: 'Jermaine',
@@ -19,10 +19,16 @@ export const CITIES = [
             user: 'Sam Smith',
             body: 'Hope everyone enjoys this post as much as I do!',
             imgForPost: 'assets/images/san-francisco-post3.jpg'
-        }] ,
+        },
+        {
+            title: 'Greatest Trip of my life',
+            user: 'Sam Smith',
+            body: 'Hope everyone enjoys this post as much as I do!',
+            imgForPost: 'assets/images/san-francisco-post3.jpg'
+        }],
     }, {
         id: 2,
-        name: 'London',
+        name: 'london',
         imgUrl: 'assets/images/london.jpg',
         postImgUrl: 'assets/images/london-header.jpg',
         posts: [{
@@ -43,7 +49,7 @@ export const CITIES = [
         }]
     },{
         id:3,
-        name: 'Sydney',
+        name: 'sydney',
         imgUrl: 'assets/images/sydney.jpg',
         postImgUrl: 'assets/images/sydney-header.jpg',
         posts: [{
@@ -64,7 +70,7 @@ export const CITIES = [
         }]
     }, {
         id:4,
-        name: 'Seattle',
+        name: 'seattle',
         imgUrl: 'assets/images/seattle.jpg',
         postImgUrl: 'assets/images/seattle-header.jpg',
         posts: [{

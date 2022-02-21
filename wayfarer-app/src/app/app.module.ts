@@ -11,6 +11,9 @@ import { PostComponent } from './post/post.component';
 import { CitiesDirective } from './cities.directive';
 import { DescriptionComponent } from './description/description.component';
 import { CityComponent } from './city/city.component';
+import { FormsModule } from '@angular/forms';
+
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,9 @@ import { CityComponent } from './city/city.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
