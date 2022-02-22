@@ -8,8 +8,8 @@
       Currently {{ weather.weather[0].description }}
     </p>
     <p class="weather-temperature">
-      There's a high of {{ weather.main.temp_max }} ° F and a low of
-      {{ weather.main.temp_min }} ° F.
+      There's a high of {{ convertKelvinToFahrenheit(weather.main.temp_max) }} °
+      F and a low of {{ convertKelvinToFahrenheit(weather.main.temp_min) }} ° F.
     </p>
   </section>
   <div class="cover">

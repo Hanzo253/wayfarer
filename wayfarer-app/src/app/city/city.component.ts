@@ -47,6 +47,10 @@ export class CityComponent implements OnInit {
     });
   }
 
+  convertKelvinToFahrenheit(temperature: any) {
+    return Math.round((((temperature-273.15) * 1.8) + 32) * 100) / 100;
+  }
+
   onSubmit(title: any, user: any, body: any, imgForPost: any) {
 
     switch(this.city.name){
