@@ -53,19 +53,19 @@ export const CITIES = [
         imgUrl: 'assets/images/sydney.jpg',
         postImgUrl: 'assets/images/sydney-header.jpg',
         posts: [{
-            title: '',
-            user: '',
-            body: '',
+            title: 'Blast from the past',
+            user: 'Sam',
+            body: 'I wish I could stay here forever! I will coming back!',
             imgForPost: 'assets/images/sydney-post1.jpg'
         },{
-            title: '',
-            user: '',
-            body: '',
+            title: 'Best place on earth!',
+            user: 'Carrie',
+            body: 'I vote everyone in the world MUST see this place!',
             imgForPost: 'assets/images/sydney-post2.jpg'
         },{
-            title: '',
-            user: '',
-            body: '',
+            title: 'Sorry mom not coming home',
+            user: 'Elizabeth',
+            body: 'I have everything thing I need here food,beaches, hot guys what else do I need lol.',
             imgForPost: 'assets/images/sydney-post3.jpg'
         }]
     }, {
@@ -74,19 +74,19 @@ export const CITIES = [
         imgUrl: 'assets/images/seattle.jpg',
         postImgUrl: 'assets/images/seattle-header.jpg',
         posts: [{
-            title: '',
-            user: '',
-            body: '',
+            title: 'Cold but worth it',
+            user: 'Jack',
+            body: 'Went fishing every morning at the crack of dawn nothing like it.',
             imgForPost: 'assets/images/seattle-post1.jpg'
         },{
-            title: '',
-            user: '',
-            body: '',
+            title: 'The space needle!',
+            user: 'Samantha',
+            body: 'I would have never thought it would look this cool in person',
             imgForPost: 'assets/images/seattle-post2.jpg'
         },{
-            title: '',
-            user: '',
-            body: '',
+            title: 'Sports',
+            user: 'Nick',
+            body: 'Came down to watch my team beat up on the Seattle Seahawks GO BEARS!',
             imgForPost: 'assets/images/seattle-post3.jpg'
         }]
     }
