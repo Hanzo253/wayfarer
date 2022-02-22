@@ -1,11 +1,13 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CITIES } from '../cities/cities';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Subject } from 'rxjs';
 import { WeatherService } from '../services/weather/weather.service';
 import { userPost } from './userPost';
-
+import { FormGroup } from '@angular/forms';
+import { NgForm } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-city',
   templateUrl: './city.component.html',
@@ -16,12 +18,15 @@ export class CityComponent implements OnInit {
   cities: any = CITIES;
   city: any;
   posts: any = CITIES[0].posts
-  postTitle: any = CITIES[0].posts;
+  postTitle: any 
+  searchValue:string = '';
+  createPostForm :any 
+
   // title : any;
    
   // bigPost = new userPost('Great Trip', 'Mike', 'Wish we could stay longer');
  
-
+  // @ViewChild('createPostForm',{static:false}) createPostForm :NgForm
   @Input() cityName: string = "";
 
   weather: any;
@@ -33,6 +38,11 @@ export class CityComponent implements OnInit {
   findWeather(cityName: string) {
     this.searchSubject.next(cityName);
     
+  }
+
+  findTitle(postTitle :any ){
+    this.postTitle = ''
+    console.log(postTitle = '')
   }
 
   open(content: any) {
@@ -50,6 +60,17 @@ export class CityComponent implements OnInit {
     });
   }
 
+  
+
+  handleClear(){
+    // clearing the value
+  // this.inputTitle.nativeElement.value = ' ';
+  // this.createPostForm.resetForm();
+}
+
+
+
+
   onSubmit(title:string, user:string, body:string, image: string){
     // for(let i = 4; i < this.postTitle.length ; i++){
     //   this.postTitle[i] = 'fsdfsdf'
@@ -60,13 +81,34 @@ export class CityComponent implements OnInit {
     // this.postTitle = Object.assign(this.postTitle,{
     //   title: title, user:user, body: description
     // });
-    this.posts.push(new userPost(title, user, body, image))
+    // this.posts.push(new userPost(title, user, body, image))
     console.log(this.posts)
     console.log(this.city.name)
 
     switch(this.city.name){
-        case 'san francisco'
+        case 'san francisco':{
+          CITIES[0].posts.push(new userPost(title, user, body, image))
+          break
+        }
+        case 'london':{
+          CITIES[1].posts.push(new userPost(title, user, body, image))
+          break
+        }
+        case 'sydney':{
+          CITIES[2].posts.push(new userPost(title, user, body, image))
+          break
+        }
+        case 'seattle':{
+          CITIES[3].posts.push(new userPost(title, user, body, image))
+          break
+        }
     }
+     
+    title = ''
+    user = ''
+    body = ''
+
+    
     // this.route.paramMap.subscribe(params => {
     //   CITIES.find(() => {
     //     let paramId: string = params.get('id') || '';

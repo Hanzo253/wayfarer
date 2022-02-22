@@ -34,17 +34,17 @@
 
                        <!-- Create Post Form -->
     <div class="modal-body">
-      <form #postForm="ngForm"  novalidate>
+      <form name='createPostForm'  formGroup="createPostForm"  novalidate>
   
         <div class="mb-3">
           <label for="title-name" class="col-form-label">Title</label>
-          <input [(ngModel)]="posts.title" 
-          required #title="ngModel" name="title" 
+          <input [(ngModel)]="posts.title"  
+          required #title="ngModel"  name="title" 
           type="text" [class.is-invalid]="title.invalid && title.touched" 
           class="form-control" id="title-name" />
           <small class="text-danger"  [class.d-none]="title.valid || title.untouched" >Title is required</small>
         </div>
-          
+          {{posts.invalid}}
 
         <div class="mb-3">
           <label for="author-name" class="col-form-label">User</label>
@@ -80,7 +80,7 @@
       >
         Close
       </button>
-      <button [disabled]="postForm.form.invalid "  type="button" class="btn btn-success" (click)="modal.dismiss()"   (click)="onSubmit(posts.title,posts.user,posts.body,posts.imgForPost)">
+      <button  type="button" class="btn btn-success" (click)="modal.dismiss()"  (click)="findTitle(posts.title)" (click)="onSubmit(posts.title,posts.user,posts.body,posts.imgForPost)"  >
         Submit
       </button>
     </div>
