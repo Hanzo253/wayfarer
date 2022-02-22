@@ -32,20 +32,77 @@
       ></button>
     </div>
     <div class="modal-body">
-      <form>
+      <form #postForm="ngForm">
         <div class="mb-3">
           <label for="title-name" class="col-form-label">Title</label>
-          <input type="text" class="form-control" id="title-name" />
+          <input
+            type="text"
+            class="form-control"
+            id="title-name"
+            [(ngModel)]="posts.title"
+            required
+            #title="ngModel"
+            name="title"
+            [class.is-invalid]="title.invalid && title.touched"
+            maxlength="200"
+            required
+          />
+          <small
+            class="text-danger"
+            [class.d-none]="title.valid || title.untouched"
+            >Title is required</small
+          >
         </div>
         <div class="mb-3">
-          <label for="author-name" class="col-form-label">Author</label>
-          <input type="text" class="form-control" id="author-name" />
+          <label for="user-name" class="col-form-label">User</label>
+          <input
+            type="text"
+            class="form-control"
+            id="user-name"
+            [(ngModel)]="posts.user"
+            name="user"
+            #user="ngModel"
+            [class.is-invalid]="user.invalid && user.touched"
+            required
+          />
+          <small
+            class="text-danger"
+            [class.d-none]="user.valid || user.untouched"
+          >
+            User is required
+          </small>
+        </div>
+        <div class="mb-3">
+          <label for="image" class="col-form-label">Image</label>
+          <input
+            [(ngModel)]="posts.imgForPost"
+            name="image"
+            #image="ngModel"
+            type="text"
+            class="form-control"
+            id="image"
+          />
         </div>
         <div class="mb-3">
           <label for="description-text" class="col-form-label">
             Description:
           </label>
-          <textarea class="form-control" id="description-text"></textarea>
+          <textarea
+            class="form-control"
+            id="description-text"
+            [(ngModel)]="posts.body"
+            name="description"
+            name="description"
+            #description="ngModel"
+            [class.is-invalid]="description.invalid && description.touched"
+            required
+          ></textarea>
+          <small
+            class="text-danger"
+            [class.d-none]="description.valid || description.untouched"
+          >
+            Description is required
+          </small>
         </div>
       </form>
     </div>
@@ -57,7 +114,14 @@
       >
         Close
       </button>
-      <button type="button" class="btn btn-success" (click)="modal.close()">
+      <button
+        type="submit"
+        class="btn btn-success"
+        (click)="
+          onSubmit(posts.title, posts.user, posts.body, posts.imgForPost);
+          postForm.resetForm()
+        "
+      >
         Submit
       </button>
     </div>
@@ -72,7 +136,13 @@
 <section class="posts-section">
   <div class="post-container" *ngFor="let post of city.posts; index as i">
     <div class="card px-50 float-start">
-      <img src="{{ post.imgForPost }}" class="card-img-top" alt="post image" />
+      <div *ngIf="post.imgForPost">
+        <img
+          src="{{ post.imgForPost }}"
+          class="card-img-top"
+          alt="post image"
+        />
+      </div>
       <div class="card-body px-50">
         <h5 class="card-title">{{ post.title }}</h5>
         <!-- <p class="card-text">
@@ -89,12 +159,15 @@
             ></button>
           </div>
           <div class="modal-body">
-            <img
-              src="{{ post.imgForPost }}"
-              alt="view post image"
-              class="post-img"
-            />
+            <div *ngIf="post.imgForPost">
+              <img
+                src="{{ post.imgForPost }}"
+                alt="view post image"
+                class="post-img"
+              />
+            </div>
             <p class="post-description">{{ post.body }}</p>
+            <span class="post-user">- {{ post.user }}</span>
           </div>
           <div class="modal-footer">
             <button
@@ -112,8 +185,5 @@
         </button>
       </div>
     </div>
-    <!-- {{ city.name }}{{ post.title }} -->
-    <!-- </a> -->
-    <!-- <p>{{ post.body }}</p> -->
   </div>
 </section>

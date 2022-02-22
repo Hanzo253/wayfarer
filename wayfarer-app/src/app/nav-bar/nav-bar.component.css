@@ -54,3 +54,9 @@
 .header-nav-link:active {
   color: #a5d8ff;
 }
+
+.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

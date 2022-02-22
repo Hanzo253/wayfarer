@@ -4,6 +4,7 @@ import { CITIES } from '../cities';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Subject } from 'rxjs';
 import { WeatherService } from '../services/weather/weather.service';
+import { NewPosts } from '../newposts';
 
 @Component({
   selector: 'app-city',
@@ -15,6 +16,8 @@ export class CityComponent implements OnInit {
   cities: any = CITIES;
 
   city: any;
+
+  posts: any = CITIES[0].posts
 
   @Input() cityName: string = "";
 
@@ -42,6 +45,34 @@ export class CityComponent implements OnInit {
     return name.replace(/\w\S*/g, function(name){
       return name.charAt(0).toUpperCase() + name.substr(1).toLowerCase();
     });
+  }
+
+  onSubmit(title: any, user: any, body: any, imgForPost: any) {
+
+    if (title === undefined || user === undefined || body === undefined || title === '' || user === '' || body === '') {
+      alert("Missing input in one of the required fields, try again");
+      // return;
+    } else {
+      switch(this.city.name){
+        case 'san francisco':{
+          CITIES[0].posts.push(new NewPosts(title, user, body, imgForPost));
+          break;
+        }
+        case 'london':{
+          CITIES[1].posts.push(new NewPosts(title, user, body, imgForPost));
+          break;
+        }
+        case 'sydney':{
+          CITIES[2].posts.push(new NewPosts(title, user, body, imgForPost));
+          break;
+        }
+        case 'seattle':{
+          CITIES[3].posts.push(new NewPosts(title, user, body, imgForPost));
+          break;
+        }
+      }
+      this.modalService.dismissAll();
+    }
   }
 
   ngOnInit(): void {

@@ -20,9 +20,10 @@ export class NavBarComponent implements OnInit {
     //alerts that a certain event is firing, whenever a certain event is firing => i want to return something
     //how the event is published
     //once event fires, it runs the api call
-    if (city === "San Francisco" || city === "Seattle" || city === "Sydney" || city === "London") {
+    if (city === "San Francisco" || city === "Seattle" || city === "Sydney" || city === "London" || city === "san francisco" || city === "seattle" || city === "sydney" || city === "london") {
       this.searchSubject.next(city);
       this.router.navigate([`/cities/${this.lowerCaseWord(city)}`]);
+      this.city = undefined;
     } else {
       alert("City not avaliable.");
     }
@@ -54,7 +55,7 @@ export class NavBarComponent implements OnInit {
     // this.searchSubject.next(city);
     // //necessary with key events
     // this.router.navigate([`/cities/${this.lowerCaseWord(city)}`]);
-    if (city === "San Francisco" || city === "Seattle" || city === "Sydney" || city === "London") {
+    if (city === "San Francisco" || city === "Seattle" || city === "Sydney" || city === "London" || city === "san francisco" || city === "seattle" || city === "sydney" || city === "london") {
       this.searchSubject.next(city);
       this.router.navigate([`/cities/${this.lowerCaseWord(city)}`]);
     } else {
