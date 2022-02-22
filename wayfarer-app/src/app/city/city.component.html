@@ -32,7 +32,7 @@
       ></button>
     </div>
     <div class="modal-body">
-      <form #postForm="ngForm">
+      <form #postForm="ngForm" novalidate>
         <div class="mb-3">
           <label for="title-name" class="col-form-label">Title</label>
           <input
@@ -121,6 +121,7 @@
           onSubmit(posts.title, posts.user, posts.body, posts.imgForPost);
           postForm.resetForm()
         "
+        [disabled]="postForm.form.invalid"
       >
         Submit
       </button>

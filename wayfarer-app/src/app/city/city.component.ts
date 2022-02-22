@@ -49,11 +49,7 @@ export class CityComponent implements OnInit {
 
   onSubmit(title: any, user: any, body: any, imgForPost: any) {
 
-    if (title === undefined || user === undefined || body === undefined || title === '' || user === '' || body === '') {
-      alert("Missing input in one of the required fields, try again");
-      // return;
-    } else {
-      switch(this.city.name){
+    switch(this.city.name){
         case 'san francisco':{
           CITIES[0].posts.push(new NewPosts(title, user, body, imgForPost));
           break;
@@ -71,8 +67,7 @@ export class CityComponent implements OnInit {
           break;
         }
       }
-      this.modalService.dismissAll();
-    }
+    this.modalService.dismissAll();
   }
 
   ngOnInit(): void {

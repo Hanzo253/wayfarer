@@ -58,6 +58,7 @@ export class NavBarComponent implements OnInit {
     if (city === "San Francisco" || city === "Seattle" || city === "Sydney" || city === "London" || city === "san francisco" || city === "seattle" || city === "sydney" || city === "london") {
       this.searchSubject.next(city);
       this.router.navigate([`/cities/${this.lowerCaseWord(city)}`]);
+      this.city = undefined;
     } else {
       alert("City not avaliable.");
     }
