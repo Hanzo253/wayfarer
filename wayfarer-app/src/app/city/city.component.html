@@ -34,6 +34,7 @@
 
                        <!-- Create Post Form -->
     <div class="modal-body">
+<<<<<<< HEAD
       <form name='createPostForm'  formGroup="createPostForm"  novalidate>
   
         <div class="mb-3">
@@ -43,15 +44,68 @@
           type="text" [class.is-invalid]="title.invalid && title.touched" 
           class="form-control" id="title-name" />
           <small class="text-danger"  [class.d-none]="title.valid || title.untouched" >Title is required</small>
+=======
+      <form #postForm="ngForm">
+        <div class="mb-3">
+          <label for="title-name" class="col-form-label">Title</label>
+          <input
+            type="text"
+            class="form-control"
+            id="title-name"
+            [(ngModel)]="posts.title"
+            required
+            #title="ngModel"
+            name="title"
+            [class.is-invalid]="title.invalid && title.touched"
+            maxlength="200"
+            required
+          />
+          <small
+            class="text-danger"
+            [class.d-none]="title.valid || title.untouched"
+            >Title is required</small
+          >
+>>>>>>> f82b8d2287c2d8420019e9c17cbc42fa2a3513a5
         </div>
           {{posts.invalid}}
 
         <div class="mb-3">
+<<<<<<< HEAD
           <label for="author-name" class="col-form-label">User</label>
           <input [(ngModel)]="posts.user"   
           name="user"  #author="ngModel"   type="text" required  [class.is-invalid]="author.invalid && author.touched" 
           class="form-control" id="author-name"/>
           <small class="text-danger"   [class.d-none]="author.valid || author.untouched" >Author is required</small>
+=======
+          <label for="user-name" class="col-form-label">User</label>
+          <input
+            type="text"
+            class="form-control"
+            id="user-name"
+            [(ngModel)]="posts.user"
+            name="user"
+            #user="ngModel"
+            [class.is-invalid]="user.invalid && user.touched"
+            required
+          />
+          <small
+            class="text-danger"
+            [class.d-none]="user.valid || user.untouched"
+          >
+            User is required
+          </small>
+        </div>
+        <div class="mb-3">
+          <label for="image" class="col-form-label">Image</label>
+          <input
+            [(ngModel)]="posts.imgForPost"
+            name="image"
+            #image="ngModel"
+            type="text"
+            class="form-control"
+            id="image"
+          />
+>>>>>>> f82b8d2287c2d8420019e9c17cbc42fa2a3513a5
         </div>
 
         <div  class="mb-3">
@@ -66,7 +120,26 @@
           <label for="description-text" class="col-form-label">
             Body:
           </label>
+<<<<<<< HEAD
           <textarea [(ngModel)]="posts.body"  name="description"  class="form-control" id="description-text"></textarea>
+=======
+          <textarea
+            class="form-control"
+            id="description-text"
+            [(ngModel)]="posts.body"
+            name="description"
+            name="description"
+            #description="ngModel"
+            [class.is-invalid]="description.invalid && description.touched"
+            required
+          ></textarea>
+          <small
+            class="text-danger"
+            [class.d-none]="description.valid || description.untouched"
+          >
+            Description is required
+          </small>
+>>>>>>> f82b8d2287c2d8420019e9c17cbc42fa2a3513a5
         </div>
       </form>
 
@@ -80,7 +153,18 @@
       >
         Close
       </button>
+<<<<<<< HEAD
       <button  type="button" class="btn btn-success" (click)="modal.dismiss()"  (click)="findTitle(posts.title)" (click)="onSubmit(posts.title,posts.user,posts.body,posts.imgForPost)"  >
+=======
+      <button
+        type="submit"
+        class="btn btn-success"
+        (click)="
+          onSubmit(posts.title, posts.user, posts.body, posts.imgForPost);
+          postForm.resetForm()
+        "
+      >
+>>>>>>> f82b8d2287c2d8420019e9c17cbc42fa2a3513a5
         Submit
       </button>
     </div>
@@ -97,9 +181,18 @@
   <div class="post-container" *ngFor="let post of city.posts; index as i">
     <div class="card px-50 float-start">
       <div *ngIf="post.imgForPost">
+<<<<<<< HEAD
         <img src="{{ post.imgForPost }}" class="card-img-top" alt="post image" />
       </div>
       
+=======
+        <img
+          src="{{ post.imgForPost }}"
+          class="card-img-top"
+          alt="post image"
+        />
+      </div>
+>>>>>>> f82b8d2287c2d8420019e9c17cbc42fa2a3513a5
       <div class="card-body px-50">
         <h5 class="card-title">{{ post.title }}</h5>
         <!-- <p class="card-text">
@@ -116,13 +209,25 @@
               (click)="modal.dismiss()"
             ></button>
           </div>
+<<<<<<< HEAD
           <div *ngIf="post.imgForPost" class="modal-body">
             <img
               src="{{ post.imgForPost }}"
               alt="view post image"
               class="post-img"
             />
+=======
+          <div class="modal-body">
+            <div *ngIf="post.imgForPost">
+              <img
+                src="{{ post.imgForPost }}"
+                alt="view post image"
+                class="post-img"
+              />
+            </div>
+>>>>>>> f82b8d2287c2d8420019e9c17cbc42fa2a3513a5
             <p class="post-description">{{ post.body }}</p>
+            <span class="post-user">- {{ post.user }}</span>
           </div>
           <div class="modal-footer">
             <button
@@ -140,9 +245,6 @@
         </button>
       </div>
     </div>
-    <!-- {{ city.name }}{{ post.title }} -->
-    <!-- </a> -->
-    <!-- <p>{{ post.body }}</p> -->
   </div>
   <!-- <div class="post-container" *ngFor="let userPost of userPost; index as i"></div> -->
   

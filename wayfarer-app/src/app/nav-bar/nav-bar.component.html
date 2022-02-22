@@ -16,7 +16,11 @@
             aria-label="Search"
             (keydown.enter)="onKeydownEvent(city)"
           />
-          <button (click)="findCity(city)" class="btn btn-primary">
+          <button
+            type="submit"
+            (click)="findCity(city)"
+            class="btn btn-primary"
+          >
             Search
           </button>
         </div>

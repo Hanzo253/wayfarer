@@ -67,6 +67,13 @@
   height: 400px;
 }
 
+.post-user {
+  display: flex;
+  font-style: italic;
+  align-items: flex-end;
+  justify-content: end;
+}
+
 .post-description {
-  margin: 25px auto;
+  margin: 15px auto;
 }
